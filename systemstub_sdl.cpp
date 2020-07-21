@@ -111,7 +111,7 @@ void SystemStub_SDL::init(const char *title, int w, int h, bool fullscreen, int 
 	_fullscreen = fullscreen;
 	_scalerType = kScalerTypeInternal;
 	_scaleFactor = 1;
-	_scaler = 0;
+	_scaler = &_internalScaler;
 	_scalerSo = 0;
 	if (scalerParameters->name[0]) {
 		setScaler(scalerParameters);
