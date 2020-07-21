@@ -1013,8 +1013,8 @@ void SystemStub_SDL::setScaler(const ScalerParameters *parameters) {
 		int type;
 		const Scaler *scaler;
 	} scalers[] = {
-		{ "point", kScalerTypePoint, 0 },
-		{ "linear", kScalerTypeLinear, 0 },
+		{ "point", kScalerTypePoint, &_internalScaler },
+		{ "linear", kScalerTypeLinear, &_internalScaler },
 		{ "scale", kScalerTypeInternal, &_internalScaler },
 #ifdef USE_STATIC_SCALER
 		{ "nearest", kScalerTypeInternal, &scaler_nearest },
